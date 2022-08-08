@@ -163,7 +163,7 @@ public class PixQRCodeBuilder {
         if (pixKey == null || pixKey.trim().equals(""))
             throw new InvalidValueFormatException("A chave PIX não pode ser um campo vazio ou nulo");
 
-        this.pixQRCode.setPixKey(pixKey);
+        this.pixQRCode.setPixKey(pixKey.toUpperCase());
 
         return this;
     }

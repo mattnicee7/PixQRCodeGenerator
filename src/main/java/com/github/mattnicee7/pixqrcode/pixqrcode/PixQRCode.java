@@ -29,8 +29,10 @@ public class PixQRCode {
         stringBuilder.append("");
 
         // Merchant Account Information - PIX:
-        stringBuilder.append("26410014BR.GOV.BCB.PIX");
-        stringBuilder.append("0119").append(this.pixKey);
+        final String merchantAccountInformation = "0014BR.GOV.BCB.PIX" + "01" + pixKey.length() + this.pixKey;
+        stringBuilder.append("26")
+                .append(merchantAccountInformation.length())
+                .append(merchantAccountInformation);
 
         // Merchant Category Code:
         stringBuilder.append("52040000");
@@ -40,22 +42,33 @@ public class PixQRCode {
 
         // Transaction Amount:
         if (withValue)
-            stringBuilder.append("5407").append(value);
+            stringBuilder.append("54")
+                    .append(String.valueOf(value).length() < 10 ? "0" + String.valueOf(value).length() : String.valueOf(value).length())
+                    .append(value);
 
         // Country Code:
         stringBuilder.append("5802BR");
 
         // Merchant Name:
-        stringBuilder.append("5925").append(receiverFullName);
+        stringBuilder.append("59")
+                .append(receiverFullName.length())
+                .append(receiverFullName);
 
         // Merchant City:
-        stringBuilder.append("6011").append(receiverCity);
+        stringBuilder.append("60")
+                .append(receiverCity.length() < 10 ? "0" + receiverCity.length() : receiverCity.length())
+                .append(receiverCity);
 
         // Postal code:
         stringBuilder.append("");
 
         // Additional Data Field:
-        stringBuilder.append("62130509").append(transactionIdentifier);
+        final String transactionIdentifierFinalString =
+                "05" + (transactionIdentifier.length() < 10 ? "0" + transactionIdentifier.length() : transactionIdentifier.length()) + transactionIdentifier;
+
+        stringBuilder.append("62")
+                .append(transactionIdentifierFinalString.length() < 10 ? "0" + transactionIdentifierFinalString.length() : transactionIdentifierFinalString.length())
+                .append(transactionIdentifierFinalString);
 
         // Unreserved Templates:
         stringBuilder.append("");

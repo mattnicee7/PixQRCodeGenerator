@@ -2,7 +2,7 @@
 
 Seja bem vindo ao repositório. Aqui você encontrará como esse framework foi feito, exemplos de uso, dependencias usadas.
 
-* Versão Atual: 1.0.0 (Instável).
+* Versão Atual: 1.1.0 (Instável).
 
 ## Importe o framework para seu projeto:
 
@@ -20,7 +20,7 @@ Seja bem vindo ao repositório. Aqui você encontrará como esse framework foi f
     <dependency>
         <groupId>com.github.mattnicee7</groupId>
         <artifactId>PixQRCodeGenerator</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </dependency>
 </dependencies>
 ```
@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.mattnicee7:PixQRCodeGenerator:1.0.0'
+    implementation 'com.github.mattnicee7:PixQRCodeGenerator:1.1.0'
 }
 ```
 
