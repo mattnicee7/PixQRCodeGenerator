@@ -16,7 +16,7 @@ Seja bem vindo ao repositório. Aqui você encontrará como esse framework foi f
 
 <dependencies>
     <dependency>
-        <groupId>com.github.mattnicee7.pixqrcode</groupId>
+        <groupId>com.github.mattnicee7</groupId>
         <artifactId>PixQRCodeGenerator</artifactId>
         <version>1.0.0</version>
     </dependency>
