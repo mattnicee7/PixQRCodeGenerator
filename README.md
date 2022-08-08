@@ -2,6 +2,8 @@
 
 Seja bem vindo ao repositório. Aqui você encontrará como esse framework foi feito, exemplos de uso, dependencias usadas.
 
+* Versão Atual: 1.0.0 (Instável).
+
 ## Importe o framework para seu projeto:
 
 ### Maven:
