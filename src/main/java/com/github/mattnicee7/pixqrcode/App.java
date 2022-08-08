@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
         final PixQRCode pixQRCodeExampleWithoutValue = new PixQRCodeBuilder()
                 .receiverFullName("Fantasy Name")
-                .transactionIdentifier("SalaryPayment")
+                .transactionIdentifier("Salary")
                 .receiverCity("Sao Paulo")
                 .pixKey("mypix@tests.com")
                 .withValue(false)

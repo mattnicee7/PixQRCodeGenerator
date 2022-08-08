@@ -16,9 +16,9 @@ public class PixQRCodeBuilder {
 
     /**
      * Set the receiver full name.
-     *
-     * Pattern: "[a-Z](15)".
-     *
+     * <br>
+     * Regex: "[A-z ]{1, 25}".
+     * <br>
      * Rules:
      * <ul>
      *     <li>Cannot be null or empty field.
@@ -38,6 +38,9 @@ public class PixQRCodeBuilder {
         if (receiverFullName.length() > 25)
             throw new InvalidValueFormatException("O nome do beneficiário não pode ter mais de 25 caracteres.");
 
+        if (!(PixPatternsConstants.RECEIVER_NAME_PATTERN.matcher(receiverFullName).matches()))
+            throw new InvalidValueFormatException("Há algo de errado com o nome do beneficiário. Regex: [A-z ]{1,25}");
+
         this.pixQRCode.setReceiverFullName(receiverFullName);
 
         return this;
@@ -45,9 +48,9 @@ public class PixQRCodeBuilder {
 
     /**
      * Set the receiver city.
-     *
-     * Pattern: "[a-Z](15)"
-     *
+     * <br>
+     * Pattern: "[A-z ]{1, 15}"
+     * <br>
      * Rules:
      * <ul>
      *     <li>Cannot be null or empty field.
@@ -66,6 +69,9 @@ public class PixQRCodeBuilder {
 
         if (receiverCity.length() > 15)
             throw new InvalidValueFormatException("O nome da cidade do beneficiário não pode ter mais de 15 caracteres.");
+
+        if (!(PixPatternsConstants.RECEIVER_CITY_PATTERN.matcher(receiverCity).matches()))
+            throw new InvalidValueFormatException("Há algo de errado com a cidade do beneficiário. Regex: [A-z ]{1,15}");
 
         this.pixQRCode.setReceiverCity(receiverCity);
 
@@ -88,9 +94,9 @@ public class PixQRCodeBuilder {
 
     /**
      * Set the transaction value.
-     *
+     * <br>
      * If the withValue is false, this will not be used.
-     *
+     * <br>
      * @param value
      *        The transaction value.
      */
@@ -102,9 +108,9 @@ public class PixQRCodeBuilder {
 
     /**
      * Set the transaction identifier.
-     *
-     * Pattern: "[a-Z]{d}(15)"
-     *
+     * <br>
+     * Pattern: "[a-Z0-9]{1, 20}"
+     * <br>
      * Rules:
      * <ul>
      *     <li>The transaction identifier cannot have white space.
@@ -112,7 +118,7 @@ public class PixQRCodeBuilder {
      *     <li>The transaction identifier can be an empty or null field.
      * </ul>
      *
-     * @param identifier
+     * @param transactionIdentifier
      *        The transaction identifier.
      *
      * @throws InvalidValueFormatException
@@ -129,6 +135,9 @@ public class PixQRCodeBuilder {
                 .filter(it -> it == ' ')
                 .count() > 1)
             throw new InvalidValueFormatException("O identificador não pode ter espaços em branco.");
+
+        if (!(PixPatternsConstants.TRANSACTION_IDENTIFIER_PATTERN.matcher(transactionIdentifier).matches()))
+            throw new InvalidValueFormatException("Há algo de errado com o identificador de transação. Regex: [a-Z0-9]{1,20}");
 
         this.pixQRCode.setTransactionIdentifier(transactionIdentifier);
 
