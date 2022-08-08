@@ -1,7 +1,7 @@
-package com.github.mattnicee7;
+package com.github.mattnicee7.pixqrcode;
 
-import com.github.mattnicee7.pixqrcode.PixQRCode;
-import com.github.mattnicee7.pixqrcode.PixQRCodeBuilder;
+import com.github.mattnicee7.pixqrcode.pixqrcode.PixQRCode;
+import com.github.mattnicee7.pixqrcode.pixqrcode.PixQRCodeBuilder;
 import lombok.SneakyThrows;
 
 public class App {

@@ -1,4 +1,4 @@
-package com.github.mattnicee7.pixqrcode;
+package com.github.mattnicee7.pixqrcode.pixqrcode;
 
 import java.util.regex.Pattern;
 

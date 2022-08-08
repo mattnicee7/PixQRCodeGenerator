@@ -1,6 +1,6 @@
-package com.github.mattnicee7.pixqrcode;
+package com.github.mattnicee7.pixqrcode.pixqrcode;
 
-import com.github.mattnicee7.checksum.Crc16CCITTChecksum;
+import com.github.mattnicee7.pixqrcode.checksum.Crc16CCITTChecksum;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.AccessLevel;

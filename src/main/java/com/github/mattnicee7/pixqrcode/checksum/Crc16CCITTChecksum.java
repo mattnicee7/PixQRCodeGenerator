@@ -1,4 +1,4 @@
-package com.github.mattnicee7.checksum;
+package com.github.mattnicee7.pixqrcode.checksum;
 
 import lombok.experimental.UtilityClass;
 import org.jetbrains.annotations.NotNull;

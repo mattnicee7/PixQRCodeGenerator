@@ -1,6 +1,6 @@
-package com.github.mattnicee7.pixqrcode;
+package com.github.mattnicee7.pixqrcode.pixqrcode;
 
-import com.github.mattnicee7.exception.InvalidValueFormatException;
+import com.github.mattnicee7.pixqrcode.exception.InvalidValueFormatException;
 import lombok.NoArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

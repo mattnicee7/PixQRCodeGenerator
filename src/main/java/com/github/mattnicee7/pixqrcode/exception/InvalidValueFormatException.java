@@ -1,4 +1,4 @@
-package com.github.mattnicee7.exception;
+package com.github.mattnicee7.pixqrcode.exception;
 
 public class InvalidValueFormatException extends Exception {
 
