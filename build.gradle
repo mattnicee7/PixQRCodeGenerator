@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.mattnicee7'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly("org.projectlombok:lombok:1.18.20")
+    annotationProcessor("org.projectlombok:lombok:1.18.20")
+
+    compileOnly("org.jetbrains:annotations:16.0.2")
+}
+
+test {
+    useJUnitPlatform()
+}
