@@ -3,7 +3,7 @@
 Seja bem vindo ao repositório. Aqui você encontrará como esse framework foi feito, exemplos de uso, dependencias usadas.
 Issues e Pull-Requests são muito bem vindos ao repositório, obrigado.
 
-* Versão Atual: 1.1.0 (Estável em testes).
+* Versão Atual: 1.1.0 (Estável).
 
 ## Importe o framework para seu projeto:
 
