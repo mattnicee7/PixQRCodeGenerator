@@ -7,10 +7,16 @@ import lombok.AccessLevel;
 import lombok.ToString;
 import lombok.val;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 @NoArgsConstructor
 @Setter(AccessLevel.PACKAGE)
 @ToString
 public class PixQRCode {
+
+    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("#0.00", new DecimalFormatSymbols(Locale.US));
 
     private String receiverFullName;
     private String receiverCity;
@@ -41,10 +47,13 @@ public class PixQRCode {
         stringBuilder.append("5303986");
 
         // Transaction Amount:
-        if (withValue)
+        if (withValue) {
+            val formattedValue = DECIMAL_FORMAT.format(value);
+
             stringBuilder.append("54")
-                    .append(String.valueOf(value).length() < 10 ? "0" + String.valueOf(value).length() : String.valueOf(value).length())
-                    .append(value);
+                    .append(formattedValue.length() < 10 ? "0" + formattedValue.length() : formattedValue.length())
+                    .append(formattedValue);
+        }
 
         // Country Code:
         stringBuilder.append("5802BR");
