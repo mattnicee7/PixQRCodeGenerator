@@ -78,6 +78,6 @@ System.out.println(myPixWithValue.getAsText());
 * [Manual BRCode](https://www.bcb.gov.br/content/estabilidadefinanceira/spb_docs/ManualBRCode.pdf)
 * [Pix Nascent](https://github.com/NascentSecureTech/pix-qrcode-utils) 
 
-## Veja também:
+## See too:
 
 * [Pix-API](https://github.com/bacen/pix-api) - Official Repository of PIX API.
