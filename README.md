@@ -1,11 +1,11 @@
 # PixQRCodeGenerator
 
-Seja bem vindo ao repositório. Aqui você encontrará como esse framework foi feito, exemplos de uso, dependencias usadas.
-Issues e Pull-Requests são muito bem vindos ao repositório, obrigado.
+Welcome to the repository. Here you will find how this framework was made, example usages, and more
+Issues & Pull-Requests are welcome in this repository, thanks.
 
-* Versão Atual: 1.1.2 (Estável).
+* Actual Version: 1.1.2 (Stable).
 
-## Importe o framework para seu projeto:
+## Import the framework to the your project:
 
 ### Maven:
 
@@ -37,9 +37,9 @@ dependencies {
 }
 ```
 
-## Exemplos de Uso:
+## Example Usages:
 
-#### Exemplo 1 (Um pix sem valor atribuido):
+#### Example 1 (A PIX without assigned value):
 
 ```java
 final PixQRCode myPixWithoutValue = new PixQRCodeBuilder()
@@ -53,7 +53,7 @@ final PixQRCode myPixWithoutValue = new PixQRCodeBuilder()
 System.out.println(myPixWithoutValue.getAsText());
 ```
 
-#### Exemplo 2 (Um pix com valor atribuido):
+#### Example 2 (A PIX with assigned value):
 
 ```java
 final PixQRCode myPixWithValue = new PixQRCodeBuilder()
@@ -68,16 +68,16 @@ final PixQRCode myPixWithValue = new PixQRCodeBuilder()
 System.out.println(myPixWithValue.getAsText());
 ```
 
-## Frameworks utilizados:
+## Frameworks used:
 
-* [Lombok](https://projectlombok.org/) - Facilita a construção do código com suas anotações.
-* [Jetbrains Annotations](https://www.jetbrains.com/help/idea/annotating-source-code.html) - Use anotações em seus campos/metódos para apontar algo importante.
+* [Lombok](https://projectlombok.org/) - Makes building code easier with your annotations.
+* [Jetbrains Annotations](https://www.jetbrains.com/help/idea/annotating-source-code.html) - Use annotations in your fields/methods to point out something important.
 
-## Documentações e ferramentas utilizadas:
+## Documentation and tools used:
 
 * [Manual BRCode](https://www.bcb.gov.br/content/estabilidadefinanceira/spb_docs/ManualBRCode.pdf)
 * [Pix Nascent](https://github.com/NascentSecureTech/pix-qrcode-utils) 
 
 ## Veja também:
 
-* [Pix-API](https://github.com/bacen/pix-api) - Repositório oficial da API do PIX.
+* [Pix-API](https://github.com/bacen/pix-api) - Official Repository of PIX API.
