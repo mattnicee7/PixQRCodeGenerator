@@ -35,7 +35,10 @@ public class PixQRCode {
         stringBuilder.append("");
 
         // Merchant Account Information - PIX:
-        final String merchantAccountInformation = "0014BR.GOV.BCB.PIX" + "01" + pixKey.length() + this.pixKey;
+        final String merchantAccountInformation = "0014BR.GOV.BCB.PIX" + "01" +
+                (pixKey.length() < 10 ? "0" + pixKey.length() : pixKey.length()) +
+                this.pixKey;
+
         stringBuilder.append("26")
                 .append(merchantAccountInformation.length())
                 .append(merchantAccountInformation);
@@ -60,7 +63,7 @@ public class PixQRCode {
 
         // Merchant Name:
         stringBuilder.append("59")
-                .append(receiverFullName.length())
+                .append(receiverFullName.length() < 10 ? "0" + receiverFullName.length() : receiverFullName.length())
                 .append(receiverFullName);
 
         // Merchant City:
@@ -76,7 +79,9 @@ public class PixQRCode {
                 "05" + (transactionIdentifier.length() < 10 ? "0" + transactionIdentifier.length() : transactionIdentifier.length()) + transactionIdentifier;
 
         stringBuilder.append("62")
-                .append(transactionIdentifierFinalString.length() < 10 ? "0" + transactionIdentifierFinalString.length() : transactionIdentifierFinalString.length())
+                .append(
+                        transactionIdentifierFinalString.length() < 10 ? "0" + transactionIdentifierFinalString.length()
+                                : transactionIdentifierFinalString.length())
                 .append(transactionIdentifierFinalString);
 
         // Unreserved Templates:
