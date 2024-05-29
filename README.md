@@ -3,7 +3,7 @@
 Welcome to the repository. Here you will find how this framework was made, example usages, and more
 Issues & Pull-Requests are welcome in this repository, thanks.
 
-* Actual Version: 1.1.2 (Stable).
+* Actual Version: 1.1.3 (Stable).
 
 ## Import the framework to the your project:
 
@@ -21,7 +21,7 @@ Issues & Pull-Requests are welcome in this repository, thanks.
     <dependency>
         <groupId>com.github.mattnicee7</groupId>
         <artifactId>PixQRCodeGenerator</artifactId>
-        <version>1.1.2</version>
+        <version>1.1.3</version>
     </dependency>
 </dependencies>
 ```
@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.mattnicee7:PixQRCodeGenerator:1.1.2'
+    implementation 'com.github.mattnicee7:PixQRCodeGenerator:1.1.3'
 }
 ```
 
